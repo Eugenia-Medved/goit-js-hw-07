@@ -16,20 +16,14 @@ const images = [
   },
 ];
 
-const makeImageItem = ({ url, alt }) => {
-  const imageItemEl = document.createElement("li");
+const imagesList = document.querySelector("#gallery");
 
-  const image = document.createElement("img");
-  image.setAttribute("src", url);
-  image.setAttribute("alt", alt);
-  image.setAttribute("width", 500);
-
-  imageItemEl.append(image);
-
-  return imageItemEl;
+const makeTrahsactionImageItemMarkup = (image) => {
+  const { url, alt } = image;
+  return `<li><img src="${url}" alt="${alt}" width=500></li>`;
 };
 
-const elements = images.map(makeImageItem);
+const elements = images.map(makeTrahsactionImageItemMarkup).join("");
+console.log(elements);
 
-const ingredientList = document.querySelector("#gallery");
-ingredientList.append(...elements);
+imagesList.insertAdjacentHTML("beforeend", elements);
