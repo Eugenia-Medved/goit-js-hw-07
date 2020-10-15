@@ -24,6 +24,5 @@ const makeTrahsactionImageItemMarkup = (image) => {
 };
 
 const elements = images.map(makeTrahsactionImageItemMarkup).join("");
-console.log(elements);
 
 imagesList.insertAdjacentHTML("beforeend", elements);
