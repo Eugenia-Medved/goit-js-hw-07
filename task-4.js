@@ -3,7 +3,7 @@ const incrementBtn = document.querySelector(".increment");
 const counterValue = document.querySelector("#value");
 
 decrementBtn.addEventListener("click", () => {
-  counterValue.textContent -= 1;
+  counterValue.textContent = parseInt(counterValue.textContent) - 1;
 });
 
 incrementBtn.addEventListener("click", () => {

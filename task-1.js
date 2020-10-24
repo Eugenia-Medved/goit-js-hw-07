@@ -1,8 +1,8 @@
-const allCategori = document.querySelectorAll(".item");
-console.log(allCategori);
-console.log(`В списке ${allCategori.length} категории.`);
+const allCategory = document.querySelectorAll(".item");
+console.log(allCategory);
+console.log(`В списке ${allCategory.length} категории.`);
 
-allCategori.forEach((allCategori) =>
-  console.log(`Категория: ${allCategori.firstElementChild.textContent}
-Количество элементов: ${allCategori.lastElementChild.children.length}`)
+allCategory.forEach((allCategory) =>
+  console.log(`Категория: ${allCategory.firstElementChild.textContent}
+Количество элементов: ${allCategory.lastElementChild.children.length}`)
 );
